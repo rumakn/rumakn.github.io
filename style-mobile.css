@@ -1,13 +1,7 @@
 /*style.css*/
-.img-responsive{
-	margin: 0 auto;
-}
+
 body {
 	padding-top: 55px
-}
-.starter-template{
-	padding: 40px 15px;
-	text-align: center;
 }
 #bg {
   position: fixed; 
@@ -30,9 +24,9 @@ body {
 h2 { 
    position: absolute; 
    top: 10%; 
-   left: 45%; 
+   left: 0%; 
    width: 100%; 
    color: rgb(120,120,120);
-   background-color: rgba(0,0,0,.35);
+   background-color: rgba(0,0,0,.85);
      padding: 10px;
 }
