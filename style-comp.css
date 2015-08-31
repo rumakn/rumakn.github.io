@@ -40,3 +40,36 @@ h2 {
    background-color: rgba(0,0,0,.85);
      padding: 10px;
 }
+ #resizeable img{
+  height:auto;
+  width:30%;
+}
+.verticalLine {
+  padding-left: 100px;
+  padding-right: 100px;
+  border-left: thick solid #FAF7FF;
+}
+
+#timeline p{
+   width: 200px;
+   max-width: 100%;
+
+   padding: 20px;
+   border:5px;
+
+   background-color: white;
+}
+
+#timeline img{
+  height: 200px;
+}
+.container-small {
+        max-width: 100%;
+        width: 2000px;
+        padding: 20px;
+        background-color: white;
+}
+#sketchfab {
+  padding-left: 100px;
+  padding-right: 100px;
+}
