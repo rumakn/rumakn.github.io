@@ -1,7 +1,5 @@
 <!-- about -->
 
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,9 +10,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- icon on the page -->
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="https://maxcdn.icons8.com/iOS7/PNG/25/Very_Basic/contacts-25.png">
 
-    <title>My Site</title>
+    <title>My Site - About</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -35,18 +33,24 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+
+   <!-- body set to a dark purple color-->
    <body style="background-color:rgb(20,20,25)">
+    <!-- sets a navigation bar at the top of the page, color changed to purple -->
     <nav class="navbar navbar-inverse navbar-fixed-top" style ="background-color: rgb(50,50,70)">
       <div class="container">
         <div class="navbar-header">
+          <!-- collapses the navigation bar -->
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <!-- sets the brand to my name and makes it link to the front page -->
           <a class="navbar-brand" href="index.html">Natalie</a>
         </div>
+         <!-- here I initialize the tabs and which one is active -->
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Home</a></li>
@@ -57,49 +61,57 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-    <div class="page-header">
-      <div class ="text-center">
-        <h1 style="color:rgb(130,130,130);">ABOUT ME</h1>
+
+    <!-- centered text and page -->
+    <div class ="text-center">
+      <!-- use a component for page headers to stand out from the page -->
+      <div class="page-header">
+          <!-- color of text set to grey and titled page -->
+          <h1 style="color:rgb(130,130,130);">ABOUT ME</h1>
       </div>
-    </div>
-    <div class="text-center">
-      <div id="resizeable">
+
+      <!-- resizable  -->
+      <div id="resizable">
         <img src="https://scontent-dfw1-1.xx.fbcdn.net/hphotos-prn2/v/t1.0-9/941773_618630134813957_1312547377_n.jpg?oh=e28196d32d9b95434c06f6f5c7856667&oe=5676EFFF"/>   
         <img src = "https://scontent-dfw1-1.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/11390071_982705875073046_5957712736257008061_n.jpg?oh=8f10628f0c505367df3e320d81521f39&oe=5667163E" style="width:22%;"/>   
         <img src = "https://scontent-dfw1-1.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/s720x720/10982319_952289748114659_1810485090857821932_n.jpg?oh=ffac680919f2665418f1e4a7dce26853&oe=5671F5EB" />
       </div>
-    </div>
-  	<div class="text-center">
+  	
       <hr>
-      <div id = "padding" style="background-color:rgb(255,255,255);">
-      	<p></br> Hi, I'm Natalie! </br>Here are some facts about me: </br></p>
-        
 
+      <!-- padding id gives a background with padding on all sides. This one is white -->
+      <div id = "padding" style="background-color:rgb(255,255,255);">
+        <!-- introduction -->
+      	<h1 style="color:black;"></br> Hi, I'm Natalie! </br>Here are some facts about me: </br></br> </h1>
+        
+        <!-- used bootstrap thumbnails to show information -->
         <div class="row">
           <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
-              
-                <img src="https://maxcdn.icons8.com/Android/PNG/96/Industry/biotech-96.png" title="Biotech" width="100">
+              <img src="https://maxcdn.icons8.com/Android/PNG/96/Industry/biotech-96.png" title="Biotech" width="100">
+              <!-- caption for the icon -->
               <div class="caption">
                 <h3>Bio</h3>
                 <h5>  20 years old</br> 100% Polish </h5>
               </div>
             </div>
           </div>
+
+          <!-- next icon with informatoin -->
           <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
-  
-                <img src="https://maxcdn.icons8.com/iOS7/PNG/100/Users/student_filled-100.png" title="Student Filled" width="100">
+              <img src="https://maxcdn.icons8.com/iOS7/PNG/100/Users/student_filled-100.png" title="Student Filled" width="100">
               <div class="caption">
                 <h3>Education</h3>
                 <h5>Student at University of Florida</br> Majoring in Digital Arts and Sciences</h5>
               </div>
             </div>
           </div>
+
+          <!-- next icon with informatoin -->
           <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
- 
-                <img src="https://maxcdn.icons8.com/iOS7/PNG/100/Very_Basic/home_filled-100.png" title="Home Filled" width="100">
+              <img src="https://maxcdn.icons8.com/iOS7/PNG/100/Very_Basic/home_filled-100.png" title="Home Filled" width="100">
               <div class="caption">
                 <h3>Home</h3>
                 <h5>Born in Clearwater,FL </br> grew up in Dunedin,FL</h5>
@@ -109,51 +121,63 @@
         </div>
       </div>
        
+
+      <!-- media component used for this block of information -->
       <div id = "padding" style="background-color:rgb(100,90,120);">
-      <div class="row">
-      
-        <h1 style="color:black;"> Skills & Interests </h1>
-      </br>
-        <div class="media" align="left">
-          <div class="media-left media-middle"> 
-            <img class="media-object" src="https://maxcdn.icons8.com/iOS7/PNG/100/Computer_Hardware/mouse-100.png" title="Mouse" width="100" alt="...">
+        <div class="row">
+          <!-- Title of box -->
+          <h1 style="color:black;"> Skills & Interests </h1>
+          </br>
+          
+          <div class="media" align="left">
+            <!-- icon describing information in the box -->
+            <div class="media-left media-middle"> 
+              <img class="media-object" src="https://maxcdn.icons8.com/iOS7/PNG/100/Computer_Hardware/mouse-100.png" title="Mouse" width="100" alt="...">
+            </div>
+            <!-- set color of text. heading, information and link to another page with more details -->
+            <div class="media-body" style="color:black">
+              <h3 class="media-heading">3D Modeling</h3>
+                <p style="font-size:20px">After a few semesters at UF exploring the career paths I could take, I found that 3D Character Modeling was the one that interested me most. I was drawn by the challenges and rewards of the field and I aim to work on game development creating the 3D models in my future. I was able to work for a startup here in Gainesville for 8 months. Details here
+              <a href="experience.html"><img src="https://maxcdn.icons8.com/windows8/PNG/26/Arrows/right_arrow-26.png" title="Right Arrow" width="26"/> </a></p>
+            </div>
+            <!-- icon describing information in the box -->
+            <div class="media-left media-middle"> 
+              <img class="media-object" src="https://maxcdn.icons8.com/iOS7/PNG/100/Editing/brush-100.png" title="Brush" width="100" alt="...">
+            </div>
+            <!-- set color, information and link to details -->
+            <div class="media-body" style="color:black">
+              <h3 class="media-heading">Digital Painting</h3>
+                <p style="font-size:20px">About one year ago I first opened Photoshop and began my study of digital painting. I would practice as often as I could between classes and projects, often daily. I tried many programs along the way and eventually I stuck with Krita, an open source program. Most of my work is now done in Krita, check it out 
+              <a href="art.html"><img src="https://maxcdn.icons8.com/windows8/PNG/26/Arrows/right_arrow-26.png" title="Right Arrow" width="26"/> </a> </p>
+            </div>
+            <!-- space to make the other two boxes underneath first two -->
+            </br>
+
+            <!-- icon describing information in the box -->
+            <div class="media-left media-middle"> 
+              <img class="media-object" src="https://maxcdn.icons8.com/iOS7/PNG/100/Computer_Hardware/keyboard-100.png" title="Keyboard" width="100" alt="...">
+            </div>
+            <div class="media-body" style="color:black">
+              <h3 class="media-heading">Programming</h3>
+              <p style="font-size:20px">I was hesitant to take my first programming class after hearing how challenging it could get, but the class made me fall in love with it. We worked in Java creating visual products, such as flappy bird and pong. I enjoyed seeing logic turning into a playable game. </p>
+            </div>
+            <div class="media-left media-middle"> 
+              <img class="media-object" src="https://maxcdn.icons8.com/windows10/PNG/96/Sports/tennis-96.png" title="Tennis" width="100" alt="...">
+            </div>
+            <div class="media-body" style="color:black">
+              <h3 class="media-heading">Squash</h3>
+                <p style="font-size:20px">One summer while visiting family in Poland, I learned of a game called Squash. When I came back to the US I searched everywhere for a court to play on, but couldn't find any near me. Then when I came to UF I discovered that the gym has a squash court and was able to play again. You may be wondering what this game looks like, well here is an example 
+              <a href="https://youtu.be/db4XWCHiZAo?t=150"><img src="https://maxcdn.icons8.com/windows8/PNG/26/Arrows/right_arrow-26.png" title="Right Arrow" width="26"/> </a></p>
+            </div>
           </div>
-          <div class="media-body" style="color:black">
-            <h3 class="media-heading">3D Modeling</h3>
-              After a few semesters at UF exploring the career paths I could take, I found that 3D Character Modeling was the one that interested me most. I was drawn by the challenges and rewards of the field and I aim to work on game development creating the 3D models in my future. I was able to work for a startup here in Gainesville for 8 months. Details here
-              <a href="experience.html"><img src="https://maxcdn.icons8.com/windows8/PNG/26/Arrows/right_arrow-26.png" title="Right Arrow" width="26"/> </a>
-          </div>
-          <div class="media-left media-middle"> 
-            <img class="media-object" src="https://maxcdn.icons8.com/iOS7/PNG/100/Editing/brush-100.png" title="Brush" width="100" alt="...">
-          </div>
-          <div class="media-body" style="color:black">
-            <h3 class="media-heading">Digital Painting</h3>
-              About one year ago I first opened Photoshop and began my study of digital painting. I would practice as often as I could between classes and projects, often daily. I tried many programs along the way and eventually I stuck with Krita, an open source program. Most of my work is now done in Krita, check it out <a href="art.html"><img src="https://maxcdn.icons8.com/windows8/PNG/26/Arrows/right_arrow-26.png" title="Right Arrow" width="26"/> </a>
-          </div>
-        </br>
-          <div class="media-left media-middle"> 
-            <img class="media-object" src="https://maxcdn.icons8.com/iOS7/PNG/100/Computer_Hardware/keyboard-100.png" title="Keyboard" width="100" alt="...">
-          </div>
-          <div class="media-body" style="color:black">
-            <h3 class="media-heading">Programming</h3>
-             I was hesitant to take my first programming class after hearing how challenging it could get, but the class made me fall in love with it. We worked in Java creating visual products, such as flappy bird and pong. I enjoyed seeing logic turning into a playable game. 
-          </div>
-          <div class="media-left media-middle"> 
-            <img class="media-object" src="https://maxcdn.icons8.com/windows10/PNG/96/Sports/tennis-96.png" title="Tennis" width="100" alt="...">
-          </div>
-          <div class="media-body" style="color:black">
-            <h3 class="media-heading">Squash</h3>
-             One summer while visiting family in Poland, I learned of a game called Squash. When I came back to the US I searched everywhere for a court to play on, but couldn't find any near me. Then when I came to UF I discovered that the gym has a squash court and was able to play again. You may be wondering what this game looks like, well here is an example <a href="https://youtu.be/db4XWCHiZAo?t=150"><img src="https://maxcdn.icons8.com/windows8/PNG/26/Arrows/right_arrow-26.png" title="Right Arrow" width="26"/> </a>
-          </div>
-        </div>
-      
         </div>
       </div>
+    
+      <!-- Icons provided by Icons8 -->
+
+      <p style="font-size:10px; color:grey">icons from <a style="color:grey"href="https://icons8.com/">Icons8</a></p>
+
     </div>
-    <!-- Biotech icon by Icons8 -->
-    <!-- Student Filled icon by Icons8 -->
-    <!-- Home Filled icon by Icons8 -->
-    <p style="font-size:10px; color:grey">icons from <a style="color:grey"href="https://icons8.com/">Icons8</a></p>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

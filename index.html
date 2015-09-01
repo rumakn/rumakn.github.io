@@ -1,18 +1,19 @@
-
+<!--index -->
 
 <!DOCTYPE html>
 <html lang="en">
+<!-- boostrap template for a standard website -->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content=" my first website">
+    <meta name="author" content=" Natalie Rumak">
     <!-- icon on the page -->
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="https://maxcdn.icons8.com/iOS7/PNG/25/Animals/wolf-25.png">
 
-    <title>My Site</title>
+    <title>My Site - Home</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +24,7 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-    <!-- stylesheet-->
+    <!-- stylesheets based on window size.-->
     <link rel="stylesheet" media="screen and (min-device-width: 1000px)" href="style-comp.css" />
     <link rel="stylesheet" media="screen and (min-width: 0px) and (max-width: 1000px)" href="style-mobile.css" />
    <!--  <link rel="stylesheet" href="style.css"> -->
@@ -34,39 +35,57 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+
+  <!-- body set to a dark purple color-->
   <body style="background-color:rgb(20,20,25)">
+    <!-- sets a navigation bar at the top of the page, color changed to purple -->
     <nav class="navbar navbar-inverse navbar-fixed-top" style ="background-color: rgb(50,50,70)">
       <div class="container">
         <div class="navbar-header">
+          <!-- collapses the navigation bar -->
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <!-- sets the brand to my name and makes it link to the front page -->
           <a class="navbar-brand" href="index.html">Natalie</a>
         </div>
+        <!-- here I initialize the tabs and which one is active -->
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="art.html">Art</a></li>
-             <li><a href="experience.html">Experience</a></li>
+            <li><a href="experience.html">Experience</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>  
+
+
+    <!-- this div id allows the image to fill the window. Defined in the css files -->
     <div id="bg">
 
       <img src="http://orig02.deviantart.net/d1c9/f/2015/241/5/a/resize_by_noctualis-d97lp2m.png" = alt=""/>
 
     </div>
+
+
+    <!-- container holding the information for the home page -->
     <div class="container">
-      <h2 style="font-size:30px">NATALIE RUMAK </br> <span style="font-size:14px">STUDENT | ARTIST | PROGRAMMER</span> </br> </br><a class="btn btn-primary " href="https://rumakn.artstation.com/myresume" role="button" style ="background-color:rgba(100,100,170,.8); font-size:15px">Resume</a> 
+      <!-- in the css files the h2 tag's position is moved to the right side of the screen. This is to highlight the information on the page. Span is used to maintain the position but change the formatting-->
+      <h2 style="font-size:30px">NATALIE RUMAK </br> <span style="font-size:14px">STUDENT | ARTIST | PROGRAMMER</span> </br> </br> 
+        <!-- buttons include links to relevant sites -->
+        <a class="btn btn-primary " href="https://rumakn.artstation.com/myresume" role="button" style ="background-color:rgba(100,100,170,.8); font-size:15px">Resume</a> 
         <a class="btn btn-primary " href="http://noctualis.tumblr.com" role="button" style ="background-color:rgba(100,100,170,.8); font-size:15px">Art</a>
         <a class="btn btn-primary " href="https://www.linkedin.com/pub/natalie-rumak/104/477/775" role="button" style ="background-color:rgba(100,100,170,.8); font-size:15px">LinkedIn</a>
-      </br> <span style="font-size: 12px" > contact me at: rumakn@ufl.edu <span> </h2>
+        <!-- email for my contact information--></br>
+        <span style="font-size: 12px" > contact me at: rumakn@ufl.edu <span> </h2>
     </div>
+
+    
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

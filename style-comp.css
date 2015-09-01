@@ -1,8 +1,11 @@
-/*style.css*/
+/*style for larger windows. Used for computer screens. */
 
+/*body padding so it isn't overlapping the navbar*/
 body {
 	padding-top: 55px
 }
+
+/*background settings for the front page.*/
 #bg {
   position: fixed; 
   top: -50%; 
@@ -10,6 +13,7 @@ body {
   width: 200%; 
   height: 200%;
 }
+/*image specifications for the background of the front page. Used to make sure the image will scale with the window size. */
 #bg img {
   position: absolute; 
   top: 0; 
@@ -20,56 +24,62 @@ body {
   min-width: 50%;
   min-height: 50%;
 }
+/*sets this header to appear in an absolute position. This is so that the information is highlighted on the front page*/
 h2 { 
-   position: absolute; 
-   top: 10%; 
-   left: 45%; 
-   width: 55%; 
-   color: rgb(120,120,120);
-   background-color: rgba(0,0,0,.85);
-     padding: 10px;
+  position: absolute; 
+  top: 10%; 
+  left: 45%; 
+  width: 55%; 
+  color: rgb(120,120,120);
+  background-color: rgba(0,0,0,.85);
+  padding: 10px;
 }
+/*this is for the colored sections. It adds padding on all sides of the screen. Sets the default font size as well*/
 #padding{
   padding-top: 10px;
   padding-bottom: 20px; 
+  padding-left:15px;
+  padding-right:15px;
   font-size:20px;
 }
-#padding p{
-  font-size: 25px
-}
+
+/*styled the h1 tag to have its own font*/
 h1{
   font-family:Helvetica;
 }
- #resizeable img{
+/* the resizable id allows for the image to scale in their current formatting on the about page*/
+#resizable img{
   height:auto;
   width:30%;
 }
+/*vertical line added to the side of the page with a white color*/
 .verticalLine {
   padding-left: 100px;
   padding-right: 100px;
   border-left: thick solid #FAF7FF;
 }
-
-#timeline p{
+/*timeline h1 set to */
+#timeline h1{
    width: 200px;
    max-width: 100%;
-
    padding: 20px;
    border:5px;
-
-   background-color: white;
+   background-color:rgba(100,100,170,.9); 
+   color:white
 }
-
+/*timeline images are set to a certain height to add organization*/
 #timeline img{
   height: 200px;
   max-width:100%;
 }
+/*small container for the timeline*/
 .container-small {
-        max-width: 100%;
-        width: 2000px;
-        padding: 20px;
-        background-color: white;
+  max-width: 100%;
+  width: 2000px;
+  padding: 20px;
+  background-color: white;
 }
+/*sketchfab padding*/
 #sketchfab {
   padding-left: 100px;
   padding-right: 100px;
