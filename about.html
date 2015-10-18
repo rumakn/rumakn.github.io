@@ -35,10 +35,10 @@
   </head>
 
    <!-- body set to a dark purple color-->
-   <body style="background-color:rgb(20,20,25)">
+   <body class="background">
     <!-- sets a navigation bar at the top of the page, color changed to purple -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" style ="background-color: rgb(50,50,70)">
-      <div class="container">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
         <div class="navbar-header">
           <!-- collapses the navigation bar -->
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
@@ -48,7 +48,7 @@
             <span class="icon-bar"></span>
           </button>
           <!-- sets the brand to my name and makes it link to the front page -->
-          <a class="navbar-brand" href="index.html">Natalie</a>
+          <div class="navbar-left"><img src="img\logowhite.png" title="logo" width="70"></div>
         </div>
          <!-- here I initialize the tabs and which one is active -->
         <div id="navbar" class="collapse navbar-collapse">
@@ -65,11 +65,11 @@
     <!-- centered text and page -->
     <div class ="text-center">
       <!-- use a component for page headers to stand out from the page -->
-      <div class="page-header">
+      <div class="page-top">
           <!-- color of text set to grey and titled page -->
-          <h1 style="color:rgb(130,130,130);">ABOUT ME</h1>
+          <h1>ABOUT ME</h1>
       </div>
-
+      <hr>
       <!-- resizable  -->
       <div id="resizable">
         <img src="https://scontent-dfw1-1.xx.fbcdn.net/hphotos-prn2/v/t1.0-9/941773_618630134813957_1312547377_n.jpg?oh=e28196d32d9b95434c06f6f5c7856667&oe=5676EFFF"/>   
@@ -80,7 +80,7 @@
       <hr>
 
       <!-- padding id gives a background with padding on all sides. This one is white -->
-      <div id = "padding" style="background-color:rgb(255,255,255);">
+      <div id = "padding" style="background-color:#82A6AD;">
         <!-- introduction -->
       	<h1 style="color:black;"></br> Hi, I'm Natalie! </br>Here are some facts about me: </br></br> </h1>
         
@@ -123,7 +123,7 @@
        
 
       <!-- media component used for this block of information -->
-      <div id = "padding" style="background-color:rgb(100,90,120);">
+      <div id = "padding" style="background-color:rgb(230,230,230);">
         <div class="row">
           <!-- Title of box -->
           <h1 style="color:black;"> Skills & Interests </h1>

@@ -1,5 +1,7 @@
 /*style for larger windows. Used for computer screens. */
-
+.background {
+  background-color: #DDEBEA;
+}
 /*body padding so it isn't overlapping the navbar*/
 body {
 	padding-top: 55px
@@ -83,4 +85,38 @@ h1{
 #sketchfab {
   padding-left: 100px;
   padding-right: 100px;
+}
+.page-top{
+  padding-top:10px;
+  color: black;
+}
+.navbar{
+  background-color: #333B40;
+  padding-top:1px;
+}
+ .navbar-text{
+  font-size: 25px;
+ }
+ .navbar-left{
+  padding-top: 3px;
+  padding-right: 5px;
+ }
+ .navbar-inverse .navbar-nav > li > a {
+   color: white; /*Change active text color here*/
+    }
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  background-color: #B0D9DB;
+  color: #000000;
+
+}
+.navbar-inverse .navbar-nav > .active > a,
+ .navbar-inverse .navbar-nav > .active> a:hover,
+  .navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: #B0D9DB;
+    color: #000000;
+    font-weight:bold;
+}
+hr{
+  border-color: #43899E ;
 }
