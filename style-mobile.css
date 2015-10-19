@@ -8,7 +8,7 @@ body {
 }
 
 /*background settings for the front page.*/
-#bg {
+.bg {
   position: fixed; 
   top: -50%; 
   left: -50%; 
@@ -37,7 +37,7 @@ h2 {
   padding: 10px;
 }
 /*this is for the colored sections. It adds padding on all sides of the screen. Sets the default font size as well*/
-#padding{
+.padding{
   padding-top: 10px;
   padding-bottom: 20px;
   padding-left:15px;
@@ -45,7 +45,7 @@ h2 {
   font-size:20px;
 }
 /*makes sure the images do not move off the page when you have smaller windows*/
-#padding img{
+.padding img{
   max-width:100%;
 }
 /*sets the font family to helvetica for all h1 tags*/
@@ -53,30 +53,26 @@ h1{
   font-family:Helvetica;
 }
 /*makes sure that the image scales to an appropriate size*/
- #resizable img{
+.resizable img{
   height:auto;
   width:30%;
 }
-/*adds vertical line on side of page*/
-.verticalLine {
-  padding-left: 100px;
-  padding-right: 100px;
-  border-left: thick solid #FAF7FF;
-}
+
 /*sets h1 size for smaller window*/
-#timeline h1{
+.alert{
+  font-family:Helvetica;
   font-size: 20px;
-  width: 200px;
   max-width: 100%;
   padding: 20px;
   border:5px;
-  background-color:rgba(100,100,170,.9); 
+ 
+  background-color: #82A6AD; 
   color:white
 }
 /*sets timeline paragraphs to work a certain way when rescaling the page*/
 
 /*images on the timeline will resize so that they don't pass the edge of the screen. before they stayed a certain height*/
-#timeline img{
+.timeline img{
   height: auto;
   max-width:100%;
 }
@@ -85,10 +81,11 @@ h1{
   max-width: 100%;
   width: 2000px;
   padding: 20px;
-  background-color: white;
+  margin-bottom: 30px;
+  background-color: #BCD7DA;
 }
 /*sketchfab styling for mobile*/
-#sketchfab {
+.sketchfab {
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -125,4 +122,19 @@ h1{
 }
 hr{
   border-color: #43899E ;
+}
+a{
+  color: #7A2E34;
+}
+a:hover {
+    text-decoration: none;
+    color: #B5454D;
+}
+
+a:active {
+    text-decoration: none;
+    color: #B5454D;
+}
+.pic{
+  max-width: 800px;
 }
