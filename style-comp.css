@@ -144,3 +144,7 @@ a:active {
 .pic{
     max-width: 800px;
 }
+
+.modal-contain img{
+  max-width: 100%;
+}

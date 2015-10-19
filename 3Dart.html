@@ -19,13 +19,15 @@
 
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
-
+      <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.3/angular.js"></script>
     <!-- stylesheet-->
     <link rel="stylesheet" media="screen and (min-device-width: 1000px)" href="style-comp.css" />
     <link rel="stylesheet" media="screen and (min-width: 0px) and (max-width: 1000px)" href="style-mobile.css" />
+     <script src="script.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -35,7 +37,7 @@
   </head>
 
    <!-- body set to a dark purple color-->
-   <body class="background">
+   <body class="background"  ng-app="app">
     <!-- sets a navigation bar at the top of the page, color changed to purple -->
     <nav class="navbar navbar-inverse navbar-fixed-top" >
       <div class="container-fluid">
@@ -79,7 +81,7 @@
       
       <!-- class that adds a vertical line for the timeline on the left -->
         <!-- timeline id changes the formatting into boxes based on the container and sets image sizes -->
-        <div class="timeline">
+        <div class="timeline" ng-controller="MainCtrl">
 
           <!-- start of timeline. Date box -->
           <h3><span class="alert">January 2015 - Present</span></h3>
@@ -103,8 +105,15 @@
             </div>
           </br>
               <h1> Renders </h1>
-                <img src="http://orig06.deviantart.net/5d2a/f/2015/242/c/8/ch_americanbadger01_render_sml_by_noctualis-d97svqu.png"/>
-                <img src="http://orig01.deviantart.net/a5ba/f/2015/242/d/5/ch_moth01_render_sml_by_noctualis-d97svr4.png"/>
+               <a href="#" ng-click="seturl('http://orig06.deviantart.net/5d2a/f/2015/242/c/8/ch_americanbadger01_render_sml_by_noctualis-d97svqu.png')" data-toggle="modal" data-target="#myModal">
+
+                  <img id="imageresource" src="http://orig06.deviantart.net/5d2a/f/2015/242/c/8/ch_americanbadger01_render_sml_by_noctualis-d97svqu.png">
+              </a>
+               <a href="#" ng-click="seturl('http://orig01.deviantart.net/a5ba/f/2015/242/d/5/ch_moth01_render_sml_by_noctualis-d97svr4.png')" data-toggle="modal" data-target="#myModal">
+
+                  <img id="imageresource" src="http://orig01.deviantart.net/a5ba/f/2015/242/d/5/ch_moth01_render_sml_by_noctualis-d97svr4.png">
+              </a>
+                
             </div>
 
             <!-- divide boxes -->
@@ -114,10 +123,32 @@
           <br>
           <!-- range of art -->
             <div class="container-small text-center sculpture">
-              <img src="http://img05.deviantart.net/9672/i/2014/152/2/3/paths_by_noctualis-d7kohv3.jpg"/>
-               <img src="https://cdn2.artstation.com/p/assets/images/images/000/518/322/large/natalie-rumak-rumak-natalie-modelt-1-jpg.jpg?1425400564"/>
+              <a href="#" ng-click="seturl('http://img05.deviantart.net/9672/i/2014/152/2/3/paths_by_noctualis-d7kohv3.jpg')" data-toggle="modal" data-target="#myModal">
+
+                  <img id="imageresource" src="http://img05.deviantart.net/9672/i/2014/152/2/3/paths_by_noctualis-d7kohv3.jpg">
+              </a>
+               <a href="#" ng-click="seturl('https://cdn2.artstation.com/p/assets/images/images/000/518/322/large/natalie-rumak-rumak-natalie-modelt-1-jpg.jpg?1425400564')" data-toggle="modal" data-target="#myModal">
+
+                  <img id="imageresource" src="https://cdn2.artstation.com/p/assets/images/images/000/518/322/large/natalie-rumak-rumak-natalie-modelt-1-jpg.jpg?1425400564">
+              </a>
+
             </div>
      
+
+    <div id= "myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body" ng-repeat="do in pics">
+              <img ng-src="{{do}}" style="width:100%; height: auto;" >
+
+            </div>
+          </div>
+        </div>
+      </div>
+
       </div>
 
       <!-- Icons provided by Icons8 -->

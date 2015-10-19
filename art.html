@@ -19,13 +19,15 @@
 
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
-
+      <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://code.angularjs.org/1.4.3/angular.js"></script>
     <!-- stylesheet-->
     <link rel="stylesheet" media="screen and (min-device-width: 1000px)" href="style-comp.css" />
     <link rel="stylesheet" media="screen and (min-width: 0px) and (max-width: 1000px)" href="style-mobile.css" />
+     <script src="script.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -35,7 +37,7 @@
   </head>
 
    <!-- body set to a dark purple color-->
-   <body class="background">
+   <body class="background" ng-app="app">
     <!-- sets a navigation bar at the top of the page, color changed to purple -->
     <nav class="navbar navbar-inverse navbar-fixed-top" >
       <div class="container-fluid">
@@ -80,19 +82,37 @@
       
       <!-- class that adds a vertical line for the timeline on the left -->
         <!-- timeline id changes the formatting into boxes based on the container and sets image sizes -->
-        <div class="timeline">
+        <div class="timeline" ng-controller="MainCtrl">
 
           <!-- start of timeline. Date box -->
           <h3><span class="alert">August 2015 - Present</span></h3>
           <br>
 
+
           <!-- container with specific time ranges -->
             <div class="container-small text-center">
-              <img src="http://pre13.deviantart.net/688b/th/pre/i/2015/221/d/7/lion_portrait_by_noctualis-d94ypvl.png"/>
-              <img src="http://pre08.deviantart.net/4012/th/pre/i/2015/220/f/4/deer_by_noctualis-d94uvrc.png"/>
-               <img src="http://pre01.deviantart.net/7c41/th/pre/i/2015/224/1/7/nyxa_by_noctualis-d95g998.png"/>
-               <img src="http://pre00.deviantart.net/2d1e/th/pre/i/2015/269/9/f/emperor_by_noctualis-d9b0qcm.png"/>
-               <img src="http://pre01.deviantart.net/c619/th/pre/i/2015/271/5/c/ponyta_by_noctualis-d9b5l9y.png"/>
+
+              <a href="#" ng-click="seturl('http://pre13.deviantart.net/688b/th/pre/i/2015/221/d/7/lion_portrait_by_noctualis-d94ypvl.png')" data-toggle="modal" data-target="#myModal">
+
+                  <img id="imageresource" src="http://pre13.deviantart.net/688b/th/pre/i/2015/221/d/7/lion_portrait_by_noctualis-d94ypvl.png">
+              </a>
+                 <a href="#" ng-click="seturl('http://pre08.deviantart.net/4012/th/pre/i/2015/220/f/4/deer_by_noctualis-d94uvrc.png')" data-toggle="modal" data-target="#myModal">
+
+                  <img id="imageresource" src="http://pre08.deviantart.net/4012/th/pre/i/2015/220/f/4/deer_by_noctualis-d94uvrc.png">
+              </a>
+              <a href="#" ng-click="seturl('http://pre08.deviantart.net/079b/th/pre/i/2015/291/7/6/unsignedfinish_by_noctualis-d9dmlvc.png')" data-toggle="modal" data-target="#myModal">
+
+                  <img id="imageresource" src="http://pre08.deviantart.net/079b/th/pre/i/2015/291/7/6/unsignedfinish_by_noctualis-d9dmlvc.png">
+              </a>
+              <a href="#" ng-click="seturl('http://pre00.deviantart.net/2d1e/th/pre/i/2015/269/9/f/emperor_by_noctualis-d9b0qcm.png')" data-toggle="modal" data-target="#myModal">
+
+                  <img id="imageresource" src="http://pre00.deviantart.net/2d1e/th/pre/i/2015/269/9/f/emperor_by_noctualis-d9b0qcm.png">
+              </a>
+              <a href="#" ng-click="seturl('http://pre01.deviantart.net/c619/th/pre/i/2015/271/5/c/ponyta_by_noctualis-d9b5l9y.png')" data-toggle="modal" data-target="#myModal">
+
+                  <img id="imageresource" src="http://pre01.deviantart.net/c619/th/pre/i/2015/271/5/c/ponyta_by_noctualis-d9b5l9y.png">
+              </a>
+            
              
             </div>
 
@@ -101,12 +121,25 @@
 
           <!-- container with specific time ranges -->
             <div class="container-small text-center">
-              <img src="http://pre05.deviantart.net/ac79/th/pre/i/2015/018/0/c/igni___creatures_of_renewal_by_noctualis-d8eg7cm.png"/>
-              <img src="http://pre13.deviantart.net/2905/th/pre/i/2015/127/f/a/bumblebee__by_noctualis-d8sik89.png"/>
-               <img src="http://img09.deviantart.net/8894/i/2015/172/1/1/gryphon_by_noctualis-d8y8x6q.png"/>
-               <img src="http://pre08.deviantart.net/ddee/th/pre/i/2015/173/5/2/fox_by_noctualis-d8ydzzp.png"/>
-               <img src="http://pre10.deviantart.net/cd6d/th/pre/i/2015/063/b/9/cheetah_cub_by_noctualis-d8kfnnv.png"/>
-               <img src="http://pre01.deviantart.net/b6b3/th/pre/i/2015/138/3/5/puffball_by_noctualis-d8twzz5.png"/>
+               <a href="#" ng-click="seturl('http://pre05.deviantart.net/ac79/th/pre/i/2015/018/0/c/igni___creatures_of_renewal_by_noctualis-d8eg7cm.png')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://pre05.deviantart.net/ac79/th/pre/i/2015/018/0/c/igni___creatures_of_renewal_by_noctualis-d8eg7cm.png">
+              </a>
+               <a href="#" ng-click="seturl('http://pre13.deviantart.net/2905/th/pre/i/2015/127/f/a/bumblebee__by_noctualis-d8sik89.png')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://pre13.deviantart.net/2905/th/pre/i/2015/127/f/a/bumblebee__by_noctualis-d8sik89.png">
+              </a>
+               <a href="#" ng-click="seturl('http://img09.deviantart.net/8894/i/2015/172/1/1/gryphon_by_noctualis-d8y8x6q.png')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://img09.deviantart.net/8894/i/2015/172/1/1/gryphon_by_noctualis-d8y8x6q.png">
+              </a>
+               <a href="#" ng-click="seturl('http://pre08.deviantart.net/ddee/th/pre/i/2015/173/5/2/fox_by_noctualis-d8ydzzp.png')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://pre08.deviantart.net/ddee/th/pre/i/2015/173/5/2/fox_by_noctualis-d8ydzzp.png">
+              </a>
+               <a href="#" ng-click="seturl('http://pre10.deviantart.net/cd6d/th/pre/i/2015/063/b/9/cheetah_cub_by_noctualis-d8kfnnv.png')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://pre10.deviantart.net/cd6d/th/pre/i/2015/063/b/9/cheetah_cub_by_noctualis-d8kfnnv.png">
+              </a>
+               <a href="#" ng-click="seturl('http://pre01.deviantart.net/b6b3/th/pre/i/2015/138/3/5/puffball_by_noctualis-d8twzz5.png')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://pre01.deviantart.net/b6b3/th/pre/i/2015/138/3/5/puffball_by_noctualis-d8twzz5.png">
+              </a>
+   
             </div>
 
 
@@ -115,26 +148,53 @@
           <br>
           <!-- container with more date ranges -->
             <div class="container-small text-center">
-              <img src="http://orig05.deviantart.net/6bb0/f/2014/242/4/4/froggie_by_noctualis-d7xaw5m.jpg"/>
-              <img src="http://pre13.deviantart.net/d766/th/pre/i/2014/260/6/b/siphonophore_by_noctualis-d7zjl7d.jpg"/>
-               <img src="http://pre01.deviantart.net/3106/th/pre/i/2014/349/6/3/sketchdaily__8__english_foxhound_by_noctualis-d89xzch.jpg"/>
-               <img src="http://orig04.deviantart.net/3b24/f/2014/350/a/6/sketchdaily__9___border_collie__by_noctualis-d8a35bm.jpg"/>
-               <img src="http://pre10.deviantart.net/8146/th/pre/f/2014/354/e/9/sketchdaily__13___pout_by_noctualis-d8ak93t.png"/>
-               <img src="http://pre14.deviantart.net/d37e/th/pre/f/2014/307/6/f/reflection_by_noctualis-d856e9v.jpg"/>
-                <img src="http://orig03.deviantart.net/481d/f/2014/238/6/b/steller_s_jay_by_noctualis-d7wsv45.jpg"/>
-           
+               <a href="#" ng-click="seturl('http://orig05.deviantart.net/6bb0/f/2014/242/4/4/froggie_by_noctualis-d7xaw5m.jpg')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://orig05.deviantart.net/6bb0/f/2014/242/4/4/froggie_by_noctualis-d7xaw5m.jpg">
+              </a>
+               <a href="#" ng-click="seturl('http://pre13.deviantart.net/d766/th/pre/i/2014/260/6/b/siphonophore_by_noctualis-d7zjl7d.jpg')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://pre13.deviantart.net/d766/th/pre/i/2014/260/6/b/siphonophore_by_noctualis-d7zjl7d.jpg">
+              </a>
+               <a href="#" ng-click="seturl('http://pre01.deviantart.net/3106/th/pre/i/2014/349/6/3/sketchdaily__8__english_foxhound_by_noctualis-d89xzch.jpg')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://pre01.deviantart.net/3106/th/pre/i/2014/349/6/3/sketchdaily__8__english_foxhound_by_noctualis-d89xzch.jpg">
+              </a>
+               <a href="#" ng-click="seturl('http://orig04.deviantart.net/3b24/f/2014/350/a/6/sketchdaily__9___border_collie__by_noctualis-d8a35bm.jpg')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://orig04.deviantart.net/3b24/f/2014/350/a/6/sketchdaily__9___border_collie__by_noctualis-d8a35bm.jpg">
+              </a>
+               <a href="#" ng-click="seturl('http://pre10.deviantart.net/8146/th/pre/f/2014/354/e/9/sketchdaily__13___pout_by_noctualis-d8ak93t.png')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://pre10.deviantart.net/8146/th/pre/f/2014/354/e/9/sketchdaily__13___pout_by_noctualis-d8ak93t.png">
+              </a>
+               <a href="#" ng-click="seturl('http://pre14.deviantart.net/d37e/th/pre/f/2014/307/6/f/reflection_by_noctualis-d856e9v.jpg')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://pre14.deviantart.net/d37e/th/pre/f/2014/307/6/f/reflection_by_noctualis-d856e9v.jpg">
+              </a>
+               <a href="#" ng-click="seturl('http://orig03.deviantart.net/481d/f/2014/238/6/b/steller_s_jay_by_noctualis-d7wsv45.jpg')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://orig03.deviantart.net/481d/f/2014/238/6/b/steller_s_jay_by_noctualis-d7wsv45.jpg">
+              </a>
+  
             </div>
 
           <h3><span class="alert">January 2014 - July 2014</span></h3>
           <br>
           <!-- container with more date ranges -->
             <div class="container-small text-center">
-               <img src="http://img02.deviantart.net/97e7/i/2014/186/3/8/clouds_by_noctualis-d7pdqzj.jpg"/>
-              <img src="http://orig13.deviantart.net/c3f5/f/2014/196/f/8/blue_bird_by_noctualis-d7qt0ns.jpg"/>
-               <img src="http://pre12.deviantart.net/f15e/th/pre/i/2014/162/e/6/lion_by_noctualis-d7lylpl.jpg"/>
-               <img src="http://pre09.deviantart.net/9f5d/th/pre/i/2014/163/1/4/cheetah_in_the_sun_by_noctualis-d7m47xv.jpg"/>
-               <img src="http://img14.deviantart.net/e2ef/i/2014/184/e/4/teto_playing_with_his_friend_by_noctualis-d7p2s09.jpg"/>
-               <img src="http://pre05.deviantart.net/b6b3/th/pre/i/2014/161/3/1/industrial_tiger_by_noctualis-d7ltxkn.jpg"/>
+               <a href="#" ng-click="seturl('http://img02.deviantart.net/97e7/i/2014/186/3/8/clouds_by_noctualis-d7pdqzj.jpg')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://img02.deviantart.net/97e7/i/2014/186/3/8/clouds_by_noctualis-d7pdqzj.jpg">
+              </a>
+               <a href="#" ng-click="seturl('http://orig13.deviantart.net/c3f5/f/2014/196/f/8/blue_bird_by_noctualis-d7qt0ns.jpg')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://orig13.deviantart.net/c3f5/f/2014/196/f/8/blue_bird_by_noctualis-d7qt0ns.jpg">
+              </a>
+               <a href="#" ng-click="seturl('http://pre12.deviantart.net/f15e/th/pre/i/2014/162/e/6/lion_by_noctualis-d7lylpl.jpg')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://pre12.deviantart.net/f15e/th/pre/i/2014/162/e/6/lion_by_noctualis-d7lylpl.jpg">
+              </a>
+               <a href="#" ng-click="seturl('http://pre09.deviantart.net/9f5d/th/pre/i/2014/163/1/4/cheetah_in_the_sun_by_noctualis-d7m47xv.jpg')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://pre09.deviantart.net/9f5d/th/pre/i/2014/163/1/4/cheetah_in_the_sun_by_noctualis-d7m47xv.jpg">
+              </a>
+               <a href="#" ng-click="seturl('http://img14.deviantart.net/e2ef/i/2014/184/e/4/teto_playing_with_his_friend_by_noctualis-d7p2s09.jpg')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://img14.deviantart.net/e2ef/i/2014/184/e/4/teto_playing_with_his_friend_by_noctualis-d7p2s09.jpg">
+              </a>
+               <a href="#" ng-click="seturl('http://pre05.deviantart.net/b6b3/th/pre/i/2014/161/3/1/industrial_tiger_by_noctualis-d7ltxkn.jpg')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://pre05.deviantart.net/b6b3/th/pre/i/2014/161/3/1/industrial_tiger_by_noctualis-d7ltxkn.jpg">
+              </a>
+              
             </div>
             <!-- divide boxes -->
 
@@ -143,21 +203,48 @@
           <br>
           <!-- range of art -->
             <div class="container-small text-center">
-              <img src="http://img09.deviantart.net/e308/i/2014/152/e/6/conflict_by_noctualis-d7ko7z3.jpg"/>
-              <img src="http://pre00.deviantart.net/b7b3/th/pre/i/2014/152/6/f/organic_still_life_by_noctualis-d7koi7n.jpg"/>
-               <img src="http://pre09.deviantart.net/1ffd/th/pre/i/2014/152/e/8/crane_love_by_noctualis-d7kolh4.jpg"/>
-               <img src="http://pre08.deviantart.net/e3d3/th/pre/i/2014/152/5/2/foot_by_noctualis-d7kocvx.jpg"/>
-               <img src="http://pre15.deviantart.net/66e3/th/pre/i/2014/152/d/b/cheetah_by_noctualis-d7koid9.jpg"/>
-               <img src="http://img12.deviantart.net/627c/i/2014/152/9/6/who_am_i__by_noctualis-d7ko8wt.jpg"/>
+               <a href="#" ng-click="seturl('http://img09.deviantart.net/e308/i/2014/152/e/6/conflict_by_noctualis-d7ko7z3.jpg')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://img09.deviantart.net/e308/i/2014/152/e/6/conflict_by_noctualis-d7ko7z3.jpg">
+              </a>
+               <a href="#" ng-click="seturl('http://pre00.deviantart.net/b7b3/th/pre/i/2014/152/6/f/organic_still_life_by_noctualis-d7koi7n.jpg')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://pre00.deviantart.net/b7b3/th/pre/i/2014/152/6/f/organic_still_life_by_noctualis-d7koi7n.jpg">
+              </a>
+               <a href="#" ng-click="seturl('http://pre09.deviantart.net/1ffd/th/pre/i/2014/152/e/8/crane_love_by_noctualis-d7kolh4.jpg')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://pre09.deviantart.net/1ffd/th/pre/i/2014/152/e/8/crane_love_by_noctualis-d7kolh4.jpg">
+              </a>
+               <a href="#" ng-click="seturl('http://pre08.deviantart.net/e3d3/th/pre/i/2014/152/5/2/foot_by_noctualis-d7kocvx.jpg')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://pre08.deviantart.net/e3d3/th/pre/i/2014/152/5/2/foot_by_noctualis-d7kocvx.jpg">
+              </a>
+               <a href="#" ng-click="seturl('http://pre15.deviantart.net/66e3/th/pre/i/2014/152/d/b/cheetah_by_noctualis-d7koid9.jpg')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://pre15.deviantart.net/66e3/th/pre/i/2014/152/d/b/cheetah_by_noctualis-d7koid9.jpg">
+              </a>
+               <a href="#" ng-click="seturl('http://img12.deviantart.net/627c/i/2014/152/9/6/who_am_i__by_noctualis-d7ko8wt.jpg')" data-toggle="modal" data-target="#myModal">
+                  <img id="imageresource" src="http://img12.deviantart.net/627c/i/2014/152/9/6/who_am_i__by_noctualis-d7ko8wt.jpg">
+              </a>
+
             </div>
      
+
+
+    <div id= "myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body" ng-repeat="do in pics">
+              <img ng-src="{{do}}" style="width:100%; height: auto;" >
+
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
 
       <!-- Icons provided by Icons8 -->
 
       
     </div>
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
