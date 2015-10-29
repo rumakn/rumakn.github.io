@@ -89,7 +89,7 @@
 
           <!-- container with specific time ranges -->
             <div class="container-small text-center renderimage">
-              <h4 style="color:rgb(40,40,40)"> For these three works, I was responsible for creating the model and texturing it. </h4> </br>
+              <h4 style="color:rgb(40,40,40)"> I was responsible for these models and textures while working at Immersed Games. </h4> </br>
                   <div class="sketchfab">
               <!-- html given by sketchfab -->
               <div class="embed-responsive embed-responsive-16by9">
@@ -104,6 +104,12 @@
               </div>
             </div>
           </br>
+                <h1> Animations </h1>
+                <h4 style="color:rgb(40,40,40)"> I also worked on some animations </h4>
+                <div class = "animation">
+                <img src="img\yawn.gif" max-width="50%">  <img src="img\sleep.gif" max-width="50%">
+              </div>
+
               <h1> Renders </h1>
                <a href="#" ng-click="seturl('http://orig06.deviantart.net/5d2a/f/2015/242/c/8/ch_americanbadger01_render_sml_by_noctualis-d97svqu.png')" data-toggle="modal" data-target="#myModal">
 
@@ -113,7 +119,21 @@
 
                   <img id="imageresource" src="http://orig01.deviantart.net/a5ba/f/2015/242/d/5/ch_moth01_render_sml_by_noctualis-d97svr4.png">
               </a>
-                
+            </br>
+            </div>
+
+            <div class="container-small text-center sculpture">
+               <h1> Wooden Sculpture </h1>
+               <h4 style="color:rgb(40,40,40)"> This was a project done in my sculpture course. </h4>
+            <div class = "sculpture">
+               <a href="#" ng-click="seturl('http://pre13.deviantart.net/599c/th/pre/i/2015/302/5/7/cheetah2_by_noctualis-d9etclc.jpg')" data-toggle="modal" data-target="#myModal">
+
+                  <img id="imageresource" src="http://pre13.deviantart.net/599c/th/pre/i/2015/302/5/7/cheetah2_by_noctualis-d9etclc.jpg">
+              </a>  <a href="#" ng-click="seturl('http://pre15.deviantart.net/a71e/th/pre/i/2015/302/8/5/cheetah1_by_noctualis-d9etclq.jpg?1')" data-toggle="modal" data-target="#myModal">
+
+                  <img id="imageresource" src="http://pre15.deviantart.net/a71e/th/pre/i/2015/302/8/5/cheetah1_by_noctualis-d9etclq.jpg?1">
+              </a>
+              </div>
             </div>
 
             <!-- divide boxes -->
@@ -123,13 +143,18 @@
           <br>
           <!-- range of art -->
             <div class="container-small text-center sculpture">
+      
+               <a href="#" ng-click="seturl('http://orig15.deviantart.net/43b0/f/2015/302/0/0/rumak_natalie_modelt_1_jpg_by_noctualis-d9ete76.jpg')" data-toggle="modal" data-target="#myModal">
+
+                  <img id="imageresource" src="http://orig15.deviantart.net/43b0/f/2015/302/0/0/rumak_natalie_modelt_1_jpg_by_noctualis-d9ete76.jpg">
+              </a>  <a href="#" ng-click="seturl('http://orig04.deviantart.net/353b/f/2015/302/c/a/rumak_natalie_modelt_3_jpg_by_noctualis-d9ete7f.jpg')" data-toggle="modal" data-target="#myModal">
+
+                  <img id="imageresource" src="http://orig04.deviantart.net/353b/f/2015/302/c/a/rumak_natalie_modelt_3_jpg_by_noctualis-d9ete7f.jpg">
+              </a>
+              <br><br>
               <a href="#" ng-click="seturl('http://img05.deviantart.net/9672/i/2014/152/2/3/paths_by_noctualis-d7kohv3.jpg')" data-toggle="modal" data-target="#myModal">
 
                   <img id="imageresource" src="http://img05.deviantart.net/9672/i/2014/152/2/3/paths_by_noctualis-d7kohv3.jpg">
-              </a>
-               <a href="#" ng-click="seturl('https://cdn2.artstation.com/p/assets/images/images/000/518/322/large/natalie-rumak-rumak-natalie-modelt-1-jpg.jpg?1425400564')" data-toggle="modal" data-target="#myModal">
-
-                  <img id="imageresource" src="https://cdn2.artstation.com/p/assets/images/images/000/518/322/large/natalie-rumak-rumak-natalie-modelt-1-jpg.jpg?1425400564">
               </a>
 
             </div>
@@ -142,7 +167,7 @@
               <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body" ng-repeat="do in pics">
-              <img ng-src="{{do}}" style="width:100%; height: auto;" >
+              <img ng-src="{{do}}" alt= "{{do}}" style="width:100%; height: auto;" >
 
             </div>
           </div>

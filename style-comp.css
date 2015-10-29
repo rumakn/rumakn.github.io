@@ -78,6 +78,14 @@ h1{
 .sculpture img{
    height: 300px ;
 }
+.sculpture img{
+  max-width: 100% !important;
+  height: 450px !important;
+}
+.animation img{
+  max-width: 100% !important;
+  height: 250px !important;
+}
 /*small container for the timeline*/
 .container-small {
   max-width: 100%;
@@ -107,7 +115,7 @@ h1{
   font-size: 25px;
  }
  .navbar-left{
-  padding-top: 3px;
+  
   padding-right: 5px;
  }
  .navbar-inverse .navbar-nav > li > a {
