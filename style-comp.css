@@ -28,13 +28,17 @@ body {
 }
 /*sets this header to appear in an absolute position. This is so that the information is highlighted on the front page*/
 h2 { 
+  text-align: right;
   position: absolute; 
   top: 10%; 
-  left: 45%; 
-  width: 55%; 
+  right: 60%; 
+  width: 40%; 
   color: rgb(180,180,180);
   background-color: rgba(0,0,0,.85);
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom : 10px;
+  padding-left: 10px;
+  padding-right: 50px !important;
 }
 /*this is for the colored sections. It adds padding on all sides of the screen. Sets the default font size as well*/
 .padding{
