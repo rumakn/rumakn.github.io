@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,26 +8,25 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <!-- icon on the page -->
-    <link rel="icon" href="https://maxcdn.icons8.com/windows8/PNG/26/DIY/paint_brush-26.png">
+    <link rel="icon" href="../../favicon.ico">
 
-    <title>My Site - Art</title>
+    <title>Natalie Rumak - Portfolio</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
-      <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://code.angularjs.org/1.4.3/angular.js"></script>
-    <!-- stylesheet-->
-    <link rel="stylesheet" media="screen and (min-device-width: 1000px)" href="style-comp.css" />
-    <link rel="stylesheet" media="screen and (min-width: 0px) and (max-width: 1000px)" href="style-mobile.css" />
-     <script src="script.js"></script>
 
+   <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel = "stylesheet" href="style.css" />
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -36,11 +34,10 @@
     <![endif]-->
   </head>
 
-   <!-- body set to a dark purple color-->
-   <body class="background">
-    <!-- sets a navigation bar at the top of the page, color changed to purple -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" >
-      <div class="container-fluid">
+ <body class="background"> 
+
+    <nav class="navbar navbar-inverse navbar-fixed-top center">
+      <div class="container-fluid nav-contain">
         <div class="navbar-header">
           <!-- collapses the navigation bar -->
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
@@ -49,44 +46,74 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <!-- sets the brand to my name and makes it link to the front page -->
-          <div class="navbar-left"><img src="img\logowhite.png" title="logo" width="70"></div>
-        </div>
-         <!-- here I initialize the tabs and which one is active -->
+
+        <!-- here I initialize the tabs and which one is active -->
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="art.html">2D Art</a></li>
-            <li><a href="3Dart.html">3D Art</a></li>
-            <li  class="active"><a href="resume.html">Resume</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li class="buffer"><a href="index.html" class="home-appear">Home</a></li>
+            <li class="active buffer"><a href="projects.html">Projects</a></li> 
+            <li class="buffer"><a href="about.html">About Me</a></li>
+            <li><a href="index.html"><img class="logo-appear" src="img\logolight.png" title="logo" width="150"></a></li>
+            <li class="buffer"><a href="resume.html">Resume</a></li> 
+            <li class="buffer"><a href="contact.html">Contact</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
-      </div>
+        </div><!--/.nav-collapse --> <div class="blueline"></div>
+      </div> 
+    </nav>  <body class="background"> 
+
+    <nav class="navbar navbar-inverse navbar-fixed-top center">
+      <div class="container-fluid nav-contain">
+        <div class="navbar-header">
+          <!-- collapses the navigation bar -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+        <!-- here I initialize the tabs and which one is active -->
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="buffer"><a href="index.html" class="home-appear">Home</a></li>
+            <li class="buffer"><a href="projects.html">Projects</a></li> 
+            <li class="buffer"><a href="about.html">About Me</a></li>
+            <li><a href="index.html"><img class="logo-appear" src="img\logolight.png" title="logo" width="150"></a></li>
+            <li class="active buffer"><a href="resume.html">Resume</a></li> 
+            <li class="buffer"><a href="contact.html">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse --> <div class="blueline"></div>
+      </div> 
     </nav>  
-    
-    <div class ="text-center">
-      <!-- Page Header class -->
-      <div class="page-top">
-          <h1>RESUME</h1>
-      </div>
-    <hr>
-     <h4> Download <a href="https://drive.google.com/file/d/0B2SpN3dBEjZWS0o1YU1UVlAzckE/view?usp=sharing"> here </a></h4>
+
+    <div class="container">
+
+      <div class="starter-template down">
+        <h1 class = " title page-title">Resume</h1>
+         <h4 class="text textmid"> Download <a class="textlink" href="https://drive.google.com/file/d/0B2SpN3dBEjZWS0o1YU1UVlAzckE/view?usp=sharing"> here </a></h4>
       <!-- added padding id to add format and background -->
  
         <!-- used thumbails component from bootstrap -->
-        <div class="padding">
+        <div class="padding textmid">
 
-            <img src="img\resume.png" style="max-width: 100%; max-height:1000px;">
+            <img src="img\resume.png" class="resume">
 
             <!-- caption in for thumbail -->
    
      
           </div>
       </div>
-        <!-- end of first color of padding -->
-      
-    </div>
+
+    </div><!-- /.container -->
+
+
+     <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
