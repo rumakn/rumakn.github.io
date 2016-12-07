@@ -1,7 +1,6 @@
-<!-- experience -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,24 +8,30 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <!-- icon on the page -->
-    <link rel="icon" href="https://maxcdn.icons8.com/iOS7/PNG/25/Business/briefcase-25.png">
+    <link rel="icon" href="../../favicon.ico">
 
-    <title>My Site - Projects</title>
+    <title>Natalie Rumak - Portfolio</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-    <!-- stylesheet-->
-    <link rel="stylesheet" media="screen and (min-device-width: 1000px)" href="style-comp.css" />
-    <link rel="stylesheet" media="screen and (min-width: 0px) and (max-width: 1000px)" href="style-mobile.css" />
+      <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+ <script src="https://code.angularjs.org/1.4.3/angular.js"></script>
 
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link rel = "stylesheet" href="style.css" />
+     <script src="js/script.js"></script>
+ <script src="https://use.fontawesome.com/1e643834a8.js"></script>
+ 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -34,11 +39,10 @@
     <![endif]-->
   </head>
 
-   <!-- body set to a dark purple color-->
- <body class="background">
-    <!-- sets a navigation bar at the top of the page, color changed to purple -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container-fluid">
+  <body class="background" ng-controller="MainCtrl as main"> 
+
+    <nav class="navbar navbar-inverse navbar-fixed-top center">
+      <div class="container-fluid nav-contain">
         <div class="navbar-header">
           <!-- collapses the navigation bar -->
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
@@ -47,112 +51,76 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <!-- sets the brand to my name and makes it link to the front page -->
-         <div class="navbar-left"><img src="img\logowhite.png" title="logo" width="70"></div>
-        </div>
-         <!-- here I initialize the tabs and which one is active -->
+
+        <!-- here I initialize the tabs and which one is active -->
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="art.html">2D Art</a></li>
-            <li><a href="3Dart.html">3D Art</a></li>
-              <li><a href="resume.html">Resume</a></li>
-            <li class="active"><a href="experience.html">Projects</a></li>
+            <li class="buffer"><a href="index.html" class="home-appear">Home</a></li>
+            <li class="active buffer"><a href="projects.html">Projects</a></li> 
+            <li class="buffer"><a href="about.html">About Me</a></li>
+            <li><!-- <a href="index.html"> --><img class="logo-appear" src="img\logolight_sat.png" title="logo" width="150"><!-- </a> --></li>
+            <li class="buffer"><a href="resume.html">Resume</a></li> 
+            <li class="buffer"><a href="contact.html">Contact</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
-      </div>
+        </div><!--/.nav-collapse --> <div class="blueline"></div>
+      </div> 
     </nav>  
-    
 
-    <div class ="text-center">
-      <!-- Page Header class -->
-      <div class="page-top">
-          <h1>PROJECTS</h1>
-      </div>
-    <hr>
-      <!-- added padding id to add format and background -->
-      <div class = "padding" style="background-color:white;">
-        <!-- title of section -->
-        <h1 style="color:black;"> Prisma </h1>
-      </br>
-
-        <!-- used thumbails component from bootstrap -->
-        <div class="row">
-          <div class="thumbnail">
-            <br>
-             <img src="img\shinybolt.png" alt="..." width= "300px">
-            <!-- caption in for thumbail -->
-            <div class="caption">
-              <h3><b> Shiny Bolt Games</b></h3> </br>
-              <h4>Position: Content Artist <br> September 2015 - Present</h4>
-              
-            </div>
-          </div>
-
-          <!-- continued use of thumbail component so that formatting stays consistent. Deleted image tag -->
-          <div class="thumbnail">
-            <h3><b> Responsibilities </b></h3>
-              <p> 
-                Worked on props and characters to create game-ready models and textures. 
-                <br> Developed UVs for the models to allow for texturing in Photoshop. 
-                <br> Working with art director to further develop skills in game art.
-              </p>  
-          </div>
-        </div>
-        <div class = "thumbnail">
-          <h3><b> Trailer </b></h3>
-            <div class="prismavid">
-            <div class=" embed-responsive embed-responsive-16by9">
-              <iframe src="https://www.youtube.com/embed/SxAioJPqR5I" frameborder="0" allowfullscreen></iframe>
-            </div>
-             </div>
-        </div>
-      </div>
-       </br>
-       <hr>
-    <div class = "padding" style="background-color:white;">
-        <h1 style="color:black;"> Tyto Ecology </h1>
-      </br>
-
-        <!-- used thumbails component from bootstrap -->
-        <div class="row">
-          <div class="thumbnail">
-            <img src="img\immersed.jpg" alt="..." width= "300px">
-            <!-- caption in for thumbail -->
-            <div class="caption">
-              <h3><b>Immersed Games</b></h3> </br>
-              <h4>Position: Artist Intern <br> January 2015 - August 2015</h4>
-         
-            </div>
-          </div>
-
-          <!-- continued use of thumbail component so that formatting stays consistent. Deleted image tag -->
-          <div class="thumbnail">
-            <h3><b> Responsibilities </b></h3>
-              <p> 
-                Created plant and animal models that would be game ready
-                <br> Created UV maps to go with the models and occassionally textured them as well.
-                <br> Worked on a few rigging and animation assignments as part of the internship.
-              </p>  
-          </div>
-
-            
-          <div class="thumbnail">
-            <h3><b> What I learned </b></h3>
-              <p>
-             Learned to maintain proper topology while creating recognizable models.
-            </br> Increased knowledge of Maya, Sculptris and x-Normal. 
-            </br> Collaborated with artist team to maintain consistent style.
-            </br> Participated in workshops to develop new skills such as rigging, animating and texturing. </p> 
-          </div>
-        </div>
-        <!-- end of first color of padding -->
-      </div>
-      <!-- space added for organization -->
-  
+    <div class="filters" align="center">
+      <!--   <p >   -->
+           <!-- <div class="btn-group" data-toggle="buttons">
+              <label class="btn btn-filter active">
+                <input type="checkbox" checked autocomplete="off"> Group
+              </label>  
+              <label class="btn btn-filter">
+                <input type="checkbox" autocomplete="off"> 2d
+              </label>  
+              <label class="btn btn-filter">
+                <input type="checkbox" autocomplete="off"> 3d
+              </label>  
+              <label class="btn btn-filter">
+                <input type="checkbox" autocomplete="off"> digital
+              </label>  
+              <label class="btn btn-filter">
+                <input type="checkbox" autocomplete="off"> traditional
+              </label>  
+              <label class="btn btn-filter">
+                <input type="checkbox" autocomplete="off"> personal
+              </label>  
+               <label class="btn btn-filter">
+                <input type="checkbox" autocomplete="off"> professional
+              </label>  
+            </div> -->
+        <!--  </p> -->
     </div>
-    <!-- Bootstrap core JavaScript
+
+    <div class="contain">
+        <div class="group" ng-repeat="item in main.gallery">
+          <div class="imagesize">
+              <a class = "hover" href="{{item.link}}">
+              <!-- a link goes around this -->
+            <!-- projects here -->
+               <img class ="imagesource" ng-src="{{item.image}}"/> 
+               <span class = "image_title"> <span> {{item.title}} </span></span>
+                </a>
+          </div>
+      </div>
+
+    </div><!-- /.container -->
+<footer class="footer">
+      <div class="container2">
+        <div class = "totop">
+          <a href="#"> <span class="fa fa-caret-up fa-4x" aria-hidden="true"></span></a>
+
+        </div>
+        <p>
+          <i class="fa fa-copyright" aria-hidden="true"></i> Natalie Rumak 2016 <br>
+          Icons  <i class="fa fa-copyright" aria-hidden="true"></i> Font Awesome
+        </p>
+      </div>
+    </footer>
+
+     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -162,3 +130,4 @@
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
+ <!-- Natalie Rumak --> <!-- Natalie Rumak --> <!-- Natalie Rumak --> <!-- Natalie Rumak -->
