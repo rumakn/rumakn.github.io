@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
  <!-- Natalie Rumak -->
     <link rel = "stylesheet" href="style.css" />
+     <script src="https://use.fontawesome.com/1e643834a8.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -36,7 +37,8 @@
   </head>
 
   <body class="background"> 
-
+<div id="wrapper">
+  <div id = "header">
     <nav class="navbar navbar-inverse navbar-fixed-top center">
       <div class="container-fluid nav-contain">
         <div class="navbar-header">
@@ -54,17 +56,21 @@
             <li class="active buffer"><a href="index.html" class="home-appear">Home</a></li>
             <li class="buffer"><a href="projects.html">Projects</a></li> 
             <li class="buffer"><a href="about.html">About Me</a></li>
-            <li><a href="index.html"><img class="logo-appear" src="img\logolight.png" title="logo" width="150"></a></li>
+            <li><!-- <a href="index.html"> --><img class="logo-appear" src="img\logolight_sat.png" title="logo" width="150"><!-- </a> --></li>
             <li class="buffer"><a href="resume.html">Resume</a></li> 
             <li class="buffer"><a href="contact.html">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse --> <div class="blueline"></div>
       </div> 
     </nav>  
-
+</div>
+<div id = "content">
     <div class="container">
 
       <div class="starter-template down">
+        <div class = "backbutton">
+          <a href = "projects.html"> <i class=" fa  fa-caret-left fa-3x " aria-hidden="true"></i>    <span class="fa fa-text"><br>Return</span></a>
+          </div>
         <h1 class = " title page-title">Skyboxes</h1>
         
         <img src= "img/skybox1.png" width = "100%">
@@ -75,8 +81,25 @@
       </div>
  <!-- Natalie Rumak -->
     </div><!-- /.container -->
+  </div>
  <!-- Natalie Rumak -->
-
+ <div id = "footer">
+<footer class="footer">
+      <div class="container2">
+        <div class = "totop">
+          <div class = "uptext"> <a href="#"> <span class="fa fa-caret-up fa-4x" aria-hidden="true"></span></a>
+          </div>
+          <div class = " backfoot">
+            <a href = "projects.html"> <i class=" fa fa-caret-left fa-3x" aria-hidden="true"></i><span class="fa fa-text"><br>Return</span></a>
+          </div>
+        </div>
+        <p>
+          <i class="fa fa-copyright" aria-hidden="true"></i> Natalie Rumak 2016 <br>
+          Icons  <i class="fa fa-copyright" aria-hidden="true"></i> Font Awesome
+        </p>
+      </div>
+    </footer>
+    <div>
      <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -85,6 +108,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </div>
   </body>
 </html>
  <!-- Natalie Rumak -->  <!-- Natalie Rumak -->  <!-- Natalie Rumak --> <!-- Natalie Rumak -->
