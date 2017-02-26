@@ -77,12 +77,16 @@
 
         <h4 class="text"> Projectile model created using Maya LT. Textures were created in Krita. </h4>
 
-        <div class="gallery_page" ng-repeat="item in main.cannon">
-          
-       
-               <img class = "gallery_image" ng-src="{{item.image}}"/>
         
-        </div>
+          <div class="gallery_page" ng-repeat="item in main.cannon">
+                 <a href="#" ng-click="setindexItem(item); setindex($index); changePage('cannon') " data-toggle="modal" data-target="#myModal">
+                    <img class = "gallery_image" ng-src="{{item.image}}"/>
+                
+
+              </a>
+              
+            
+          </div>
         
       </div> 
       <div style = " padding-bottom: 10px;"class = "bottom text">
@@ -94,6 +98,28 @@
  <!-- Natalie Rumak -->
     </div><!-- /.container -->
  <!-- Natalie Rumak -->
+
+ <div id= "myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header" ng-repeat="do in picIndex">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h2 class="page-title"> {{do.title}} </h2>
+            </div>
+            <div class="modal-body" ng-repeat="do in picIndex">
+              <img ng-src="{{do.image}}" style="width:100%; height: auto;" >
+                  <span class = "image_title"> <span> {{do.description}} </span></span>
+                   <button type="button" class="btn btn-default btn-lg leftArrow" ng-click="javalog(); subIndex()"><i class="fa fa-caret-left fa-5x" aria-hidden="true">    </i></button>
+                  <button type="button" class="btn btn-default btn-lg rightArrow" ng-click="javalog(); addIndex()"><i class="fa fa-caret-right fa-5x" aria-hidden="true"></i></button>
+            </div> 
+
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+
 <footer class="footer">
       <div class="container2">
         <div class = "totop">

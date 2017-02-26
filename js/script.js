@@ -5,26 +5,94 @@ myApp.controller('MainCtrl', function ($scope){
 	var person = $scope.per= 'test';
 	this.cannon = can_items;
 	this.sundial = dial_items;
+	this.digital = dig_items;
 	this.villager = vill_items;
+	this.chand = chand_items;
+	this.door = door_items;
+	this.indexholder = 0;
+
+	$scope.picIndex = [{
+	title: 'Boss Portraits',
+	image: 'img/quietus_s.png',
+	link: 'boss.html'
+}] 
+
+$scope.pageHolder = [{
+	title: 'Boss Portraits',
+	image: 'img/quietus_s.png',
+	link: 'boss.html'
+}] 
+
+$scope.changePage = function(item){
+	if(item == 'digital'){
+			$scope.pageHolder = dig_items;
+	}
+	else if(item == 'sundial'){
+			$scope.pageHolder = dial_items;
+	}
+	else if(item == 'villager'){
+		$scope.pageHolder = vill_items;
+	}
+	else if(item == 'cannon'){
+		$scope.pageHolder = can_items;
+	}
+	else if(item == 'chand'){
+		$scope.pageHolder = chand_items;
+	}
+	else if(item == 'door'){
+		$scope.pageHolder = door_items;
+	}
+}
+$scope.setindexItem = function(item){
+	$scope.picIndex[0] = item;
+
+	}
+$scope.setindex = function(item){
+	$scope.indexholder = item;
+	}
+
+	$scope.addIndex = function(item){
+	$scope.indexholder = $scope.indexholder +1;
+
+	if($scope.indexholder >= $scope.pageHolder.length){
+		$scope.indexholder = 0;
+	}
+	$scope.picIndex[0] = $scope.pageHolder[$scope.indexholder];
+	}
+
+	$scope.subIndex = function(item){
+	$scope.indexholder = $scope.indexholder -1;
+	if($scope.indexholder < 0){
+		$scope.indexholder = $scope.pageHolder.length - 1;
+	}
+	$scope.picIndex[0] = $scope.pageHolder[$scope.indexholder];
+	}
+	
+	$scope.javalog = function(item){
+		console.log($scope.picIndex[0]);
+		console.log($scope.indexholder);
+		
+	}
 });
 
+var holderIndex = [{}];
 var items = [{
 	title: 'Boss Portraits',
-	image: 'img/ignus_s.png',
+	image: 'img/quietus_s.png',
 	link: 'boss.html'
 } , {
 	title: 'Digital 2D illustrations',
 	image:'img/illustration.png',
 	link: 'digital.html'
 } , {
-	title: 'Skyboxes',
-	image: 'img/skyboxPre.png',
-	link: 'sky.html'
+	title: 'Chandelier',
+	image: 'img/chand/1.png',
+	link: 'chand.html'
 
 } , {
-	title: 'Sundial',
-	image: 'img/sundial/dial1.png',
-	link: 'sundial.html'
+	title: 'Temple Door',
+	image: 'img/door/door1.png',
+	link: 'door.html'
 } , {
 
 	title: 'Villagers',
@@ -79,6 +147,34 @@ var dial_items = [{
 	image: 'img/sundial/dial4.png',
 	description: 'sky.html'
 
+}, {
+	image: 'img/sundial/texture.png',
+	description: 'sky.html'
+
+}, {
+	image: 'img/sundial/uv.png',
+	description: 'sky.html'
+
+}];
+
+
+var dig_items = [{
+	title: 'Rendered Logo',
+	image: 'img/illustration.png',
+	description: 'sky.html'
+} , {
+	title: 'Long-Tailed Tit ',
+	image: 'img/bird.png',
+	description: 'sky.html'
+} , {
+	title: 'Owl Fox Gryphon',
+	image: 'img/noct.png',
+	description: 'sky.html'
+} , {
+	title: 'Fox',
+	image: 'img/fox.png',
+	description: 'sky.html'
+
 }];
 
 
@@ -111,4 +207,60 @@ var vill_items = [{
 } , {	image: 'img/villagers/15.png',
 	description: 'sky.html'
 
+}];
+
+
+var chand_items = [{
+	
+	image: 'img/chand/1.png',
+	description: 'sky.html'
+} , {
+	image: 'img/chand/2.png',
+	description: 'sky.html'
+} , {
+	image: 'img/chand/3.png',
+	description: 'sky.html'
+} , {
+	image: 'img/chand/4.png',
+	description: 'sky.html'
+} , {
+	image: 'img/chand/5.png',
+	description: 'sky.html'
+} , {
+	image: 'img/chand/6.png',
+	description: 'sky.html'
+} , {
+	image: 'img/chand/7.png',
+	description: 'sky.html'
+} , {
+	image: 'img/chand/8.png',
+	description: 'sky.html'
+} , {
+	image: 'img/chand/texture.png',
+	description: 'sky.html'
+}];
+
+
+var door_items = [{
+	
+	image: 'img/door/door1.png',
+	description: 'sky.html'
+} , {
+	image: 'img/door/door2.png',
+	description: 'sky.html'
+} , {
+	image: 'img/door/door3.png',
+	description: 'sky.html'
+} , {
+	image: 'img/door/door4.png',
+	description: 'sky.html'
+} , {
+	image: 'img/door/door5.png',
+	description: 'sky.html'
+} , {
+	image: 'img/door/door6.png',
+	description: 'sky.html'
+} , {
+	image: 'img/door/texture.png',
+	description: 'sky.html'
 }];
