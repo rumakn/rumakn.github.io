@@ -67,7 +67,7 @@
         </div><!--/.nav-collapse --> <div class="blueline"></div>
       </div> 
     </nav>  
-<img width = "100%" src= "img/villagers/banner.png"/>
+<img width = "100%" src= "img/villagers/banner2.png"/>
   <div class="contain_gallery">
       <div class="starter-template ">
         <div class = "backbutton">
@@ -80,8 +80,8 @@
 
 
 
-         <div class="gallery_page" ng-repeat="item in main.villager">
-                 <a href="#" ng-click="setindexItem(item); setindex($index); changePage('villager') " data-toggle="modal" data-target="#myModal">
+         <div class="gallery_page" ng-repeat="item in main.villager_low">
+                 <a href="#" ng-click="changePage('villager'); setindex($index);  " data-toggle="modal" data-target="#myModal">
                     <img class = "gallery_image" ng-src="{{item.image}}"/>
                 
 

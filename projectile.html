@@ -78,8 +78,8 @@
         <h4 class="text"> Projectile model created using Maya LT. Textures were created in Krita. </h4>
 
         
-          <div class="gallery_page" ng-repeat="item in main.cannon">
-                 <a href="#" ng-click="setindexItem(item); setindex($index); changePage('cannon') " data-toggle="modal" data-target="#myModal">
+          <div class="gallery_page" ng-repeat="item in main.cannon_low">
+                 <a href="#" ng-click="changePage('cannon'); setindex($index);  " data-toggle="modal" data-target="#myModal">
                     <img class = "gallery_image" ng-src="{{item.image}}"/>
                 
 
@@ -89,11 +89,7 @@
           </div>
         
       </div> 
-      <div style = " padding-bottom: 10px;"class = "bottom text">
-        <img class = "gallery_image" src = "img\cannon\texture.png" />
-
-        <br>
-      </div>
+     
 
  <!-- Natalie Rumak -->
     </div><!-- /.container -->

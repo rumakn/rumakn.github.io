@@ -106,7 +106,7 @@
 .btn-filter{
 	letter-spacing: 2px;
 	background: none !important;
-	padding: 5px 15px;
+	padding: 7px 15px;
     font-weight: 600;
     font-size: 10px;
     font-family: "Verdana";
@@ -115,6 +115,7 @@
   	color: #D78380;
     margin-left:6px;
     margin-right:6px;
+    margin-top:10px;
 
 }
 .btn-filter:hover,

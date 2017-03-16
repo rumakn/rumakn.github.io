@@ -76,8 +76,8 @@
         <h4 class="text"> Chandelier model created using Maya LT. Textures were created in Krita. </h4>
 
        
-           <div class="gallery_page" ng-repeat="item in main.chand">
-                 <a href="#" ng-click="setindexItem(item); setindex($index); changePage('chand') " data-toggle="modal" data-target="#myModal">
+           <div class="gallery_page" ng-repeat="item in main.chand_low">
+                 <a href="#" ng-click="changePage('chand'); setindex($index);  " data-toggle="modal" data-target="#myModal">
                     <img class = "gallery_image" ng-src="{{item.image}}"/>
                 
 
