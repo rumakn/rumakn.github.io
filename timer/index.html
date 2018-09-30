@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html id="top">
+
+    <head>
+        <meta charset="utf-8" />
+
+        <title>Pomodoro Timer</title>
+
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script src="script/script.js"></script>
+    </head>
+
+    <body class="background-main">
+        <header>
+            <!-- navigation -->
+                <nav class = "nav">
+                    <ul>
+                        <li> <a href="#top" class="btn btn-nav" > Timer</a></li>
+                        <li> <a href="#settingsWidget" class="btn btn-nav" > Settings</a></li>
+                        <li> <a href="#aboutWidget" class="btn btn-nav" > About</a></li>
+                        <li> <a href="#" class="btn btn-nav" > Stats</a></li>
+                    </ul>
+                </nav>
+           
+        </header>
+
+        <main>
+            <!-- section with countdown, quick select times, play, pause, reset  -->
+            <section class = "container">
+                
+                <div class=" widget" id="timerWidget">
+                    <!-- area for quick select times -->
+                    <div class ="flex-contain bottom-pad">
+                        <button id= "btn-work" data-id="0" class="btn btn-light btn-second"> 25 min</button>
+               
+                        <button id= "btn-short" data-id="1" class="btn btn-light btn-second"> 5 min</button>
+                
+                        <button id= "btn-long" data-id="2" class="btn btn-light btn-second"> 10 min</button>
+                
+                        <button id= "btn-cust-1" data-id="3" class="btn btn-light btn-second"> + </button>
+                
+                        <button id= "btn-cust-2" data-id="4" class="btn btn-light btn-greyed btn-second " disabled> + </button>
+                    </div>
+                    
+                    <!-- header for type of timer -->
+                    <h2 class="widget-title"> Start Timer! </h2>
+                    
+                    <!-- countdown -->
+                    <h1 id ="timer">
+                        25:00
+                    </h1>
+                    
+                    <!-- control countdown : play, pause, reset -->
+                    <div class="row">
+                        <div class="col-1-3">
+                                <button id="btn-start" class="btn btn-control btn-light"> Start </button>
+                            </div>
+                        <div class="col-1-3">
+                            <button id= "btn-reset" class="btn btn-control btn-light"> Reset </button>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- below countdown widget, stat peak -->
+                <div class="widget-light flex-contain">
+                    <h4 id = "LoopLabel" class = "flex-half-left"> Loop : # 1 Work</h4>
+                    <h4 id = "HrLabel" class ="flex-half-right"> Time Worked Today: 0 mins</h4>
+                    
+                </div>
+            </section>
+
+            
+            <!-- section for settings -->
+            <section class = "container">
+                <div class=" widget widget-light" id="settingsWidget">
+                    <h2> Settings </h2>
+                    <!-- tab to different timer settings -->
+                    <div class="TabContainer">
+                        <div class="SettingsTabs">
+                            <button id="DefaultTab"class="btn btn-tab btn-tab-select"> Defaults</button>
+                            <button id="WorkTab"class="btn btn-tab"> Work Timer</button>
+                            <button id="BreakShortTab"class="btn btn-tab"> Short Break Timer</button>
+                            <button id="BreakLongTab"class="btn btn-tab"> Long Break Timer</button>
+                            <button id="Custom1Tab"class="btn btn-tab plusTab"> + </button>
+                            <button id="Custom2Tab"class="btn btn-greyed btn-tab plusTab" disabled> + </button>
+                        </div>
+                        
+                            <form name ="form_settings_default" id = "form-settings-default" class="form-settings flex-settings">
+                                    
+                            <!-- Default Settings Form -->
+                            <fieldset>
+                                    
+                                    <legend>
+                                        Alerts
+                                    </legend>
+                                    
+                                    <ul class="flex-settings">
+                                        <li>
+                                            <label for="settingsSound">sound type </label>
+                                            <select name="settingsSound" id="settingsSound">
+                                                <option value="bell">Bell</option>
+                                                <option value="ding">Ding</option>
+                                                <option value="droplet">Droplet</option>
+                                                <option value="elevator">Elevator</option>
+                                                <option value="jingle">Jingle</option>
+                                                <option value="tone">Tone</option>
+                                            </select>
+                                        </li>   
+                                    <br/>
+                                        
+                                    <li>
+                                        <label for="settingsVolume">Volume</label>
+                                        <div class="slidecontainer" >
+                                                <input type="range" name="settingsVolume" id="settingsVolume" min="1" max="100" value="50" class="slider" >
+                                        </div>
+                                        </li>
+                                        <li>
+                                            <label> Test Sound Settings</label>
+                                            <button type="button" class="btn btn-dark testSound" id="defaultTest"> Test Sound</button>
+                                        </li>
+                                    </ul>
+
+                                </fieldset>
+                            
+                                <fieldset>
+                                        
+                                    <legend>
+                                        Loop Setup
+                                    </legend>
+                                    <ul class="flex-settings">
+                                        <li>
+                                            <label for="autoLoop"> auto loop? </label>
+                                            <input type="checkbox" name="autoLoop" id="autoLoopCheck" checked/>
+                                        </li>
+                                        <li>
+                                            <!-- customize loop timers form -->
+                                            <label for="loopdrops"> Pomodoro Timers <br>(4 Loops)</label>
+                                            <div class="flex-contain">
+                                                <select name="loopdrops_1" >
+                                                    <option selected="selected"value="0">Work</option>
+                                                    <option value="1">Short Break</option>
+                                                    <option value="2">Long Break</option>
+                                                    <option value="3" disabled>Custom 1</option>
+                                                    <option value="4" disabled >Custom 2</option>
+                                                    
+                                                </select>
+                                                <h2 class="mid-text"> + </h2>
+                                                <select name="loopdrops_2" >
+                                                    <option value="0">Work</option>
+                                                    <option selected="selected" value="1">Short Break</option>
+                                                    <option value="2">Long Break</option>
+                                                    <option value="3" disabled>Custom 1</option>
+                                                    <option value="4" disabled>Custom 2</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <label> + End Timer <br>(1 Loop) </label>
+                                            <select name="loopdrops_3">
+                                                <option value="0">Work</option>
+                                                <option value="1">Short Break</option>
+                                                <option selected="selected" value="2">Long Break</option>
+                                                <option value="3" disabled>Custom 1</option>
+                                                <option value="4" disabled>Custom 2</option>
+                                            </select>
+                                        </li>
+                                    </ul>
+                                    
+
+                                </fieldset>
+
+                                <!-- save timer and notification that saved -->
+                                <div class = "flex-contain full-container">
+                                    
+                                    <button id="saveDefault" class="btn btn-second btn-dark"> Save </button>
+                                    <button type="button" id="resetDefault" class="btn btn-second  btn-dark"> Reset </button>
+                                </div>
+                                <div class="notification">
+                                    <h3> Saved Settings! </h3>
+                                </div> 
+                            
+                            </form>
+
+                            <!-- Settings for Different Quick Timers -->
+                            <form name ="form_settings" id = "form-settings" class="form-settings hide ">
+                                
+                                    <fieldset>
+                                        <legend>
+                                            General Settings
+                                        </legend>
+                                        <ul class="flex-settings">
+                                            <li>
+                                                <label for="settingsTime">time</label>
+                                                <div class="flex-contain">
+                                                    <input type="number" placeholder="minutes" min="1" step="1" max="60" name="settingsTime" id="settingsTime" autocomplete="off" autofocus value="25" />
+                                                    <p class="mid-text" > : </p>
+                                                    <input type="number" placeholder="seconds" min="1" step="1" max="60" name="settingsTimeSec" class="settingsTimeSec" autocomplete="off" autofocus />
+                                                </div>
+                                            </li>
+                                            
+                                            <li>
+                                                <label for="settingsTag">name</label>
+                                                <input type="text" required maxlength="12" name="settingsTag" id="settingsTag" autocomplete="off" value="Custom Timer"/>
+                                            </li>
+                                        </ul>
+                                    </fieldset>
+                                   
+                                    <fieldset>
+                                        <legend>
+                                            Alerts
+                                        </legend>
+
+                                        <ul class="flex-settings">
+                                            <li>
+                                                <label for="settingsDefault"> use default? </label>
+                                                <input type="checkbox" name="settingsDefault" id="settingsDefault" checked/>
+                                            </li>
+                                                
+                                            <li>
+                                            <label for="settingsSound">sound type  </label>
+                                            <select disabled name="settingsSound" id="settingsSound" class ="defaultDepend">
+                                                <option value="bell">Bell</option>
+                                                <option value="ding">Ding</option>
+                                                <option value="droplet">Droplet</option>
+                                                <option value="elevator">Elevator</option>
+                                                <option value="jingle">Jingle</option>
+                                                <option value="tone">Tone</option>
+                                            </select>
+                                            </li>
+                                                
+
+                                            <li>
+                                            <label for="settingsVolume">Volume</label>
+                                            <div class="slidecontainer" >
+                                                    <input disabled type="range" name="settingsVolume" id="settingsVolume" min="1" max="100" value="50" class="slider defaultDepend" >
+                                            </div>
+                                            </li>
+                                            <li>
+                                                <label> Test Sound Settings</label>
+                                                <button disabled id="settingsTest" type="button" class="btn btn-dark testSound defaultDepend" disabled> Test Sound</button>
+                                            </li>
+                                        </ul>
+                                    </fieldset>
+
+                                    <!-- submit, reset and delete timer buttons -->
+                                    <div class = "flex-contain full-container">
+                                    
+                                        <button id="saveSettings" class="btn btn-second btn-dark"> Save </button>
+                                        <button type="button" id="resetSettings" class="btn btn-second  btn-dark"> Reset </button>
+                                        <button type="button" id="deleteTimer" class="btn btn-second btn-dark btn-hidden"> Delete </button>
+                                        
+                                    </div>
+                                    <!-- notification that saved -->
+                                    <div class="notification" >
+                                        <h3> Saved Settings! </h3>
+                                    </div> 
+                                </form>
+                                
+                                
+                        </div>
+                        
+                </div>
+            </section>
+
+            <!-- About section  -->
+            <section class = "container">
+                <div class=" widget widget-light" id="aboutWidget">
+                    <h2> POMODORO TECHNIQUE </h2>
+                    <p> Increase your producticity by following this simple schedule!</p>
+                    <!-- Graphic of Pomodoro Technique -->
+                    <div class = "flex-stack flex-contain widget-dark">
+
+                        
+                        <div class = "col-group">
+                            
+                            <img src ="images/4loop.svg" alt="work graphic" >
+                        </div>
+                        <div class = "col-group">
+                            
+                            <img src ="images/1loop.svg" alt="short break graphic" >
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class = "widget widget-light">
+                        
+                        <h2> About </h2>
+                    <div class ="about">
+                        
+                        <h4> What is it?</h4>
+                        <p> The Pomodoro Technique is a system of working where you break down your time into smaller sections to help manage productivity.
+                            You are more productive when you are given a chance to take a break every so often and can break down tasks into smaller chunks of work time. 
+                            This technique allows you to schedule working time and break times. 
+                        </p>
+
+                        <h4> How can it be customized? </h4>
+                        <p>
+                            With this pomodoro timer you can add two custom timers using the + buttons on the top of the timer or in the settings. 
+                            You can also delete and edit the timers through the settings section to make the timer work however you would like. Each timer can also have its own alert sound. 
+                            You can also edit the loop so that you create your own schedule that works best for you.
+                        </p>
+                    </div></div>
+                </section>
+
+                <!-- Stats Section -->
+            <section class = "container">
+                    <div class=" widget widget-light" id="statsWidget">
+                        <h2> Statistics </h2>
+                        <div class="widget-light flex-contain">
+                            <h4 id = "statToday" class = "flex-half-left"> Time Worked Today: 0 mins</h4>
+                            <h4 id = "statWeek" class ="flex-half-left"> Time Worked This Week: 0 mins</h4>
+                            <h4 id = "statTotal" class ="flex-half-left"> Total Time Worked: 0 mins</h4>
+                        </div>
+                        <br>
+                        <div class="widget-light">
+                            <table id="stats">
+                                <thead>
+                                    <tr>
+                                        <th class=""> Date </th>
+                                        <th class="table-half"> Timer Type</th> 
+                                        <th class=""> Time </th>
+                                    </tr>
+                                </thead>   
+                                <tbody>
+                                    
+                                </tbody> 
+                            </table>
+
+                    </div>
+
+                    </div>
+            <!-- History Section -->
+            </section>
+
+            <!-- Section containing Modal Pop up -->
+            </section>
+            <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>New Custom Timer</h2>
+                    </div>
+
+                    <!-- Form making new timer -->
+                    <div class="modal-body">
+                        <form id = "form-custom">
+                        
+                            <fieldset>
+                                <legend>
+                                    General Settings
+                                </legend>
+                                <ul class = " flex-settings">
+                                    <li>
+                                        <label for="modalTime">time </label>
+                                        <div class="flex-contain">
+                                            <input type="number" placeholder="minutes" min="1" step="1" max="60" name="modalTime" id="modalTime" autocomplete="off" autofocus value="25" />
+                                            <p class="colon" > : </p>
+                                            <input type="number" placeholder="seconds" min="1" step="1" max="60" name="modalTimeSec" class="settingsTimeSec" autocomplete="off" autofocus />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <label for="modalTag">name</label>
+                                        <input type="text" required maxlength="12" name="modalTag" id="modalTag" autocomplete="off" value="Custom"/>
+                                    </li>
+                                </ul>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>
+                                    Alerts
+                                </legend>
+                                <ul class = "flex-settings">
+                                    <li>
+                                        <label for="modalDefault"> use default? </label>
+                                        <input type="checkbox" name="modalDefault" id="modalDefault"  checked/>
+                                    </li>
+                                    <li>
+                                        <label for="modalSound">sound type : </label>
+                                        <select disabled name="modalSound" id="modalSound" class="defaultDepend">
+                                            <option value="bell">Bell</option>
+                                            <option value="ding">Ding</option>
+                                            <option value="droplet">Droplet</option>
+                                            <option value="elevator">Elevator</option>
+                                            <option value="jingle">Jingle</option>
+                                            <option value="tone">Tone</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        
+                                
+    
+                                    <label for="modalVolume">Volume</label>
+                                    <div class="slidecontainer" >
+                                            <input disabled type="range" name="modalVolume" id="modalVolume" min="1" max="100" value="50" class="slider defaultDepend" >
+                                    </div>
+                                </li>
+                                <li>
+                                <label> Test Sound Settings</label>
+                                    <button disabled type="button" class="btn btn-dark testSound modalTest defaultDepend"> Test Sound</button>
+                                </li>
+                            </ul>
+                            </fieldset>
+                            <div class="modal-footer">
+                                <div class ="flex-contain">
+                                    <button id= "btn-modal-save" class="btn btn-second btn-dark"> Save </button>
+                            
+                                    <button type="button" id= "btn-modal-reset" class="btn btn-second btn-dark"> Reset </button>
+                                
+                                    <button type="button" id= "btn-modal-cancel" class="btn btn-second btn-dark"> Cancel </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Audio Files Used in Timer -->
+            <div class = "audio">
+                <audio data-sound="bell" src = "audio/bell.mp3"></audio>
+                <audio data-sound="ding" src = "audio/ding.mp3"></audio>
+                <audio data-sound="droplet" src = "audio/droplet.mp3"></audio>
+                <audio data-sound="elevator" src = "audio/elevator.mp3"></audio>
+                <audio data-sound="jingle" src = "audio/jingle.mp3"></audio>
+                <audio data-sound="tone" src = "audio/tone.mp3"></audio>
+            </div>
+        </main>
+
+        <footer>
+
+        </footer>
+    </body>
+
+</html>
