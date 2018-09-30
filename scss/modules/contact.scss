@@ -1,0 +1,17 @@
+#contact-form{
+    max-width: 600px;
+    margin:auto;
+    &~li{
+        list-style: none; 
+    }
+    
+}
+
+.form-list{
+    display:flex;
+    list-style: none; 
+    >li{
+        width:100%;
+    }
+    
+}
