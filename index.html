@@ -5,12 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Natalie Rumak - Portfolio</title>
         <link rel="stylesheet" href="css/styles.css" type="text/css">
-   
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     </head>
     <body>
-        <div class='header-back'>
-
-            </div>
+        
         <header class='main-header'>
             
             <div class='header-container'>
@@ -22,7 +20,11 @@
                         <li> <a href='#top' class='btn btn-nav'> Projects</a></li>
                         <li> <a href='#about' class='btn btn-nav'> About</a></li>
                         <li> <a href='#contact' class='btn btn-nav'> Contact</a></li>
-                    </ul>
+                        <li class='social-header'>
+                                <a href='https://www.linkedin.com/in/natalkaworks/' class='btn btn-nav'> <i class="fab fa-linkedin fa-lg"></i></a>
+                                <a href='https://github.com/rumakn' class='btn btn-nav'> <i class="fab fa-github-square fa-lg"></i></a>
+                        </li>
+                        </ul>
                 </nav>
             </div>
         </header>
@@ -188,31 +190,40 @@
                     </h2>
                     <div class='widget contact-widget'>
                         <!-- Form for contact me -->
-                        <form name='contact-form' id='contact-form'>
+                        <form action='https://formspree.io/natalkaworks@gmail.com' method='POST' name='contact-form' id='contact-form'>
                             <fieldset>
                                 <legend>
-                                    Get in Touch!
+                                    GET IN TOUCH
                                 </legend>
+                                <div class='contact-desc'>
+                                    Feel free to use the form below or you can reach me at natalkaworks@gmail.com
+                                </div>
+                                
                                 <ul class='form-list'>
                                     <li>
                                         <label for='name'>
                                             Name
                                         </label>
-                                        <input type="text" required maxlength="20" name="name" autocomplete="off" value="Name"/>
+                                        <input type="text" required maxlength="20" name="name" autocomplete="off" placeholder="Name"/>
                                     </li>
                                     <li>
                                             <label for='email'>
                                                 Email
                                             </label>
-                                            <input type="email" required name="email" autocomplete="off" value="Email"/>
+                                            <input type="email" required name="_replyto" autocomplete="off" placeholder="Email"/>
                                     </li>
                                     <li>
                                             <label for='message'>
                                                 Message
                                             </label>
-                                            <textarea maxlength="1200" name='message'>
-                                                Message
-                                            </textarea>
+                                            <textarea required maxlength="1200" name='message' placeholder='Message'></textarea>
+                                    </li>
+                                    <li>
+                                        <label></label>
+                                        <div class='form-btn-container'>
+                                            <button class="btn btn-send" id="submitContact">Send</button>
+                                        </div>
+                                        
                                     </li>
                                 </ul>
                             </fieldset>
@@ -222,7 +233,10 @@
             </section>
         </main>
         <footer>
-
+                <div class='social-footer'>
+                        <a href='https://www.linkedin.com/in/natalkaworks/' class='btn btn-nav'> <i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href='https://github.com/rumakn' class='btn btn-nav'> <i class="fab fa-github-square fa-lg"></i></a>
+                </div>
     </footer>
     </body>
     
