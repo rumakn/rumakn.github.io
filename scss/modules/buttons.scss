@@ -28,3 +28,29 @@
         }
     }
 }
+
+.btn-send{
+    background: $highlight;
+    border:none;
+    color: $background-color;
+    width: 140px;
+    font-weight:bold;
+    font-family: 'Montserrat',Arial, Helvetica, sans-serif;
+    
+}
+
+.return-button{
+    background: $highlight;
+    border:none;
+    text-align: center;
+    width: 140px;
+    font-weight:bold;
+    font-family: 'Montserrat',Arial, Helvetica, sans-serif;
+    padding: 10px 0px;
+    >*{
+       text-decoration: none;   
+        color: $background-color;
+        
+    }
+   
+}

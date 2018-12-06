@@ -1,13 +1,20 @@
-$mq-1: 48em !default; /* 768px / 16px = 48em */
+$mq-1: 52em !default; /* 768px / 16px = 48em */
+$mq-2: 1200px;
 
-@mixin extra-small-only {
+@mixin small-media {
     @media only screen and (max-width : $mq-1 - 0.0625) {
         @content;
     }
 }
 
-@mixin small-and-above {
-    @media (min-width : $mq-1) {
+@mixin medium-and-above {
+    @media (min-width : $mq-1){
+        @content;
+    }
+}
+
+@mixin large-and-above{
+    @media (min-width : $mq-2) {
         @content;
     }
 }
